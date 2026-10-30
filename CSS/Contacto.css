@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --border: #e5e5e5;
+  --linkedin-blue: #0077b5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: 900; font-size: 1.5rem; text-decoration: none; color: var(--text); }
+.brand span { color: #ccc; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; margin-left: 2rem; font-size: 0.9rem; }
+.nav-links a.active { border-bottom: 2px solid var(--text); padding-bottom: 5px; }
+
+.page-content { padding: 5rem 0; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
+h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.05em; margin-bottom: 1.5rem; }
+h1 span { color: #ccc; }
+.description { color: var(--muted); margin-bottom: 2.5rem; }
+
+.contact-methods { list-style: none; }
+.contact-methods li { margin-bottom: 2rem; }
+.contact-methods small { display: block; text-transform: uppercase; font-size: 0.7rem; font-weight: 700; color: var(--muted); margin-bottom: 0.5rem; }
+.contact-methods a { color: var(--text); text-decoration: none; font-size: 1.1rem; font-weight: 500; }
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--linkedin-blue) !important;
+  font-weight: 600 !important;
+  transition: opacity 0.2s;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.pro-form { background: #e6e6e6; padding: 3rem; border: 2px solid var(--border); border-radius: 12px; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+.form-group input, .form-group textarea { width: 100%; padding: 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; }
+.btn-submit { width: 100%; background: var(--text); color: white; padding: 1rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+
+.footer { margin-top: 5rem; color: #ccc; font-size: 0.8rem; }
+
+@media (max-width: 850px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2.5rem; }
+}

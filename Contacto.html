@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto — Héctor García</title>
+    <link rel="stylesheet" href="CSS/Contacto.css" />
+  </head>
+  <body>
+    
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="brand">Héctor<span>.</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="Sobremi.html">Sobre mí</a>
+          <a href="Contacto.html" class="active">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <section class="contact-grid">
+        
+        <div class="contact-info">
+          <h1>Hablemos<span>.</span></h1>
+          <p class="description">Si tienes un proyecto en mente o quieres proponer una colaboración, escríbeme directamente.</p>
+          
+          <ul class="contact-methods">
+            <li>
+              <small>Email</small>
+              <a href="mailto:hector11gp@gmail.com">hector11gp@gmail.com</a>
+            </li>
+            <li>
+              <small>Teléfono</small>
+              <a href="tel:+34617363849">+34 617 36 38 49</a>
+            </li>
+            <li>
+              <small>LinkedIn</small>
+              <a href="https://www.linkedin.com/in/h%C3%A9ctor-garc%C3%ADa-pascual/" target="_blank" class="linkedin-link">
+                <img src="./Foto/zLinkedin.png" alt="" class="linkedin-icon" />
+                Ver perfil profesional
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-container">
+          <form action="https://api.web3forms.com/submit" method="POST" class="pro-form">
+
+  <input type="hidden" name="access_key" value="9190845b-a07e-45fd-8eac-d90c535dd378" />
+  <input type="hidden" name="subject" value="Nuevo mensaje desde tu portfolio" />
+
+  <div class="form-group">
+    <label>Nombre completo</label>
+    <input type="text" name="name" placeholder="Tu nombre..." required />
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="tu@email.com" required />
+  </div>
+
+  <div class="form-group">
+    <label>Mensaje</label>
+    <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">Enviar mensaje</button>
+</form>
+
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> — Héctor García</p>
+    </footer>
+
+    <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.querySelector('.pro-form');
+  const btn = document.querySelector('.btn-submit');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    const data = new FormData(form);
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    });
+
+    if (res.ok) {
+      form.innerHTML = `
+        <div style="text-align: center; padding: 2rem;">
+          <p style="font-size: 2rem;">✅</p>
+          <h3>¡Mensaje enviado correctamente!</h3>
+          <p>Me pondré en contacto contigo lo antes posible.</p>
+        </div>
+      `;
+    } else {
+      btn.textContent = 'Enviar mensaje';
+      btn.disabled = false;
+      alert('Error al enviar. Inténtalo de nuevo.');
+    }
+  });
+</script>
+  </body>
+</html>

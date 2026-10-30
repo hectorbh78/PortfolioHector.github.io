@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Panel de reservas de App Hotel</title>
+  <desc id="description">Ilustración de una aplicación de escritorio para consultar habitaciones y reservas.</desc>
+  <rect width="1200" height="675" fill="#f3f0e9"/>
+  <rect x="128" y="82" width="944" height="511" rx="24" fill="#fff" stroke="#1a1a1a" stroke-width="4"/>
+  <path d="M152 82h896a24 24 0 0 1 24 24v54H128v-54a24 24 0 0 1 24-24Z" fill="#1a1a1a"/>
+  <circle cx="166" cy="120" r="8" fill="#d9b879"/>
+  <circle cx="195" cy="120" r="8" fill="#77736b"/>
+  <circle cx="224" cy="120" r="8" fill="#77736b"/>
+  <rect x="170" y="190" width="208" height="363" rx="14" fill="#f3f0e9"/>
+  <path d="M204 272h140M204 312h110M204 352h126M204 392h96" stroke="#c7c1b6" stroke-width="12" stroke-linecap="round"/>
+  <rect x="204" y="220" width="72" height="12" rx="6" fill="#a88a55"/>
+  <rect x="204" y="450" width="140" height="62" rx="12" fill="#1a1a1a"/>
+  <path d="M231 480h86" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <text x="424" y="222" fill="#1a1a1a" font-family="Arial, sans-serif" font-size="32" font-weight="700">Reservas</text>
+  <text x="424" y="257" fill="#77736b" font-family="Arial, sans-serif" font-size="18">Resumen de ocupación</text>
+  <rect x="424" y="286" width="584" height="104" rx="14" fill="#f7f5f0"/>
+  <circle cx="476" cy="338" r="28" fill="#e5d7ba"/>
+  <path d="M462 338h28M476 324v28" stroke="#8f7548" stroke-width="5" stroke-linecap="round"/>
+  <text x="526" y="330" fill="#1a1a1a" font-family="Arial, sans-serif" font-size="20" font-weight="700">Habitación 204</text>
+  <text x="526" y="359" fill="#77736b" font-family="Arial, sans-serif" font-size="16">12 — 16 junio · 2 huéspedes</text>
+  <rect x="858" y="322" width="112" height="34" rx="17" fill="#dce8dc"/>
+  <text x="880" y="345" fill="#446148" font-family="Arial, sans-serif" font-size="14" font-weight="700">Confirmada</text>
+  <rect x="424" y="410" width="584" height="104" rx="14" fill="#f7f5f0"/>
+  <circle cx="476" cy="462" r="28" fill="#e5d7ba"/>
+  <path d="M461 462h30M476 447v30" stroke="#8f7548" stroke-width="5" stroke-linecap="round"/>
+  <text x="526" y="454" fill="#1a1a1a" font-family="Arial, sans-serif" font-size="20" font-weight="700">Habitación 108</text>
+  <text x="526" y="483" fill="#77736b" font-family="Arial, sans-serif" font-size="16">18 — 20 junio · 1 huésped</text>
+  <rect x="858" y="446" width="112" height="34" rx="17" fill="#f2e5cc"/>
+  <text x="879" y="469" fill="#806537" font-family="Arial, sans-serif" font-size="14" font-weight="700">Pendiente</text>
+</svg>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HotelApp, aplicación JavaFX del taller de Desarrollo de Interfaces: habitaciones, búsqueda por número y tarjetas con detalles." />
+    <title>HotelApp — Héctor García</title>
+    <link rel="stylesheet" href="CSS/AppHotel.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="brand">Héctor<span>.</span></a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="Sobremi.html" class="active">Sobre mí</a>
+          <a href="Contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <a class="back-link" href="Sobremi.html">← Volver a mis proyectos</a>
+
+      <section class="project-hero">
+        <div class="project-heading">
+          <p class="eyebrow">Desarrollo de Interfaces · Hotel Sol, Madrid</p>
+          <h1>HotelApp<span>.</span></h1>
+          <p class="description">
+            Aplicación de JavaFX para consultar habitaciones y su disponibilidad. El proyecto
+            parte de una búsqueda sobre datos XML y evoluciona con un componente visual propio
+            para presentar cada habitación.
+          </p>
+          <div class="technology-list" aria-label="Tecnologías utilizadas">
+            <span>Java</span>
+            <span>JavaFX</span>
+            <span>FXML</span>
+            <span>XML</span>
+          </div>
+          <a class="download-button" href="pdfhotel.pdf" download="pdfhotel.pdf">Descargar PDF del proyecto</a>
+        </div>
+
+        <figure class="project-image">
+          <img
+            src="./hotelact1.png"
+            alt="HotelApp mostrando tarjetas de habitaciones con precio, capacidad, estado y botón para ver detalles"
+          />
+          <figcaption>Listado de habitaciones del Hotel Sol con el componente TarjetaHabitacion.</figcaption>
+        </figure>
+      </section>
+
+      <section class="features-section" aria-labelledby="features-heading">
+        <div class="section-heading">
+          <p class="eyebrow">El taller, en dos partes</p>
+          <h2 id="features-heading">De los datos XML a una interfaz hecha a medida.</h2>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Lectura de habitaciones</h3>
+            <p>La aplicación carga las habitaciones desde <code>reservas.xml</code>, con respaldo en <code>src/xml/</code> si el recurso no está disponible.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Búsqueda por número</h3>
+            <p>Comprueba si una habitación está disponible, ocupada o no existe. Las pruebas del taller incluyen los números 120, 101 y 200.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Tarjetas personalizadas</h3>
+            <p><code>TarjetaHabitacion</code>, un componente JavaFX basado en <code>HBox</code>, muestra tipo, precio, capacidad y estado con colores; las celdas mantienen una altura uniforme de 100 px.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>Detalles y selección</h3>
+            <p>Abre una ventana modal con planta, vista y accesibilidad. La búsqueda selecciona y resalta la habitación correspondiente.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="screenshots-section" aria-labelledby="screenshots-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Así funciona</p>
+          <h2 id="screenshots-heading">Capturas de HotelApp.</h2>
+        </div>
+        <div class="screenshots-grid">
+          <figure class="screenshot-card">
+            <img class="zoomable-image" src="./hotelact2.png" alt="Habitación 120 seleccionada en gris y ventana modal con los detalles de la habitación 123" loading="lazy" tabindex="0" role="button" aria-label="Ampliar captura: búsqueda de habitación 120 y detalle de la 123" />
+            <figcaption>La habitación 120 queda resaltada tras la búsqueda; se muestran también los detalles de la 123.</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img class="zoomable-image" src="./hotelact3.png" alt="Ventana de detalles de la habitación 126 con planta, tipo, capacidad, precio, vista, accesibilidad y estado" loading="lazy" tabindex="0" role="button" aria-label="Ampliar captura: ventana de detalle de la habitación 126" />
+            <figcaption>Ventana de detalle modal de la habitación 126.</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img class="zoomable-image" src="./hotelact4.png" alt="Ventana de detalles de la habitación 102 sobre el listado de habitaciones" loading="lazy" tabindex="0" role="button" aria-label="Ampliar captura: ventana de detalle de la habitación 102" />
+            <figcaption>Detalle de la habitación 102 junto al listado de habitaciones.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <dialog class="image-zoom" aria-label="Captura ampliada">
+        <button class="image-zoom-close" type="button" aria-label="Cerrar imagen ampliada">×</button>
+        <img class="image-zoom-content" alt="" />
+      </dialog>
+
+      <section class="project-info" aria-labelledby="approach-heading">
+        <div>
+          <p class="eyebrow">Componente propio</p>
+          <h2 id="approach-heading">Una tarjeta que delega la acción.</h2>
+        </div>
+        <p>
+          <code>TarjetaHabitacion</code> recibe los datos mediante <code>setHabitacion(h)</code> y
+          comunica el clic en «Ver detalles» mediante <code>setOnVerDetalles(...)</code>, sin
+          decidir qué hace el controlador; el callback recibe un <code>Consumer&lt;Habitacion&gt;</code>.
+          El listado usa celdas de altura uniforme y el
+          controlador abre una ventana modal con planta, tipo, capacidad, precio, vista,
+          accesibilidad y estado. Como retoque visual pendiente, los detalles pueden mejorar la
+          concordancia de «persona(s)» y mostrar el estado con mayúscula inicial.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> — Héctor García</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const zoomDialog = document.querySelector('.image-zoom');
+      const zoomImage = document.querySelector('.image-zoom-content');
+
+      document.querySelectorAll('.zoomable-image').forEach((image) => {
+        const openZoom = () => {
+          zoomImage.src = image.src;
+          zoomImage.alt = image.alt;
+          zoomDialog.showModal();
+        };
+
+        image.addEventListener('click', openZoom);
+        image.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openZoom();
+          }
+        });
+      });
+
+      document.querySelector('.image-zoom-close').addEventListener('click', () => zoomDialog.close());
+      zoomDialog.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') zoomDialog.close();
+      });
+      zoomDialog.addEventListener('click', (event) => {
+        if (event.target === zoomDialog) zoomDialog.close();
+      });
+      zoomDialog.addEventListener('close', () => {
+        zoomImage.removeAttribute('src');
+      });
+    </script>
+  </body>
+</html>

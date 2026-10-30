@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre mí — Héctor García</title>
+    <link rel="stylesheet" href="CSS/Sobremi.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body>
+    
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="brand">Héctor<span>.</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="Sobremi.html" class="active">Sobre mí</a>
+          <a href="Contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Más allá del código.</h1>
+        <p class="description">
+          Desarrollador enfocado en crear soluciones digitales limpias, funcionales y centradas en el usuario.
+        </p>
+      </section>
+
+      <section class="projects-section">
+        <h2 style="font-size: 2rem; letter-spacing: -0.02em;">Mis Proyectos</h2>
+        
+        <div class="projects-grid">
+          
+          <a href="https://github.com/hectorbh78/Trabajo-Intermodular" class="project-card" target="_blank">
+            <div class="project-preview">
+              <img src="./Foto/Project.png" alt="Vista previa Proyecto 1" />
+            </div>
+            <h3>Proyecto Intermodular DAM</h3>
+            <p>Hecho con Java, HTML, CSS y SQL.</p>
+          </a>
+
+          <a class="project-card" href="AppHotel.html" aria-label="Ver detalles del proyecto App Hotel">
+            <div class="project-preview">
+              <img src="./Foto/app-hotel.svg" alt="Aplicación de hotel con listado de habitaciones y estados de disponibilidad" />
+            </div>
+            <h3>HotelApp - Actualizado</h3>
+            <p>Aplicación JavaFX para consultar habitaciones, buscar su disponibilidad y ver sus detalles.</p>
+          </a>
+
+          <a class="project-card" target="_blank">
+            <div class="project-preview">
+              <img src="./Foto/a2.png" alt="Vista previa Proyecto 3" />
+            </div>
+            <h3>En proceso</h3> 
+            <p></p>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="about-grid">
+        <div class="about-text">
+          <h2 style="font-size: 2rem; margin-bottom: 2rem;">Mi trayectoria</h2>
+          
+          <div class="trayectoria-lista">
+            <div class="trayectoria-item">
+              <span class="fecha">2026 — Actualidad</span>
+              <h3>Técnico y Desarrollador de Aplicaciones Multiplataforma - ThePower Education</h3>
+              <p>Especializándome en arquitecturas limpias y software eficiente.</p>
+            </div>
+
+            <div class="trayectoria-item">
+              <span class="fecha">2018 — 2024</span>
+              <h3>Formación Académica - IES Ignacio Aldecoa</h3>
+              <p>Formación académica con énfasis en fundamentos tecnológicos, lógica matemática y bases de la computación.</p>  
+            </div>
+          </div>
+
+          <h2 style="font-size: 2rem; margin-top: 2rem; margin-bottom: 2rem;">Experiencia Profesional</h2>
+
+          <div class="trayectoria-lista">
+            <div class="trayectoria-item">
+              <span class="fecha">2026 — Actualidad</span>
+              <h3>Prácticas - Best Pro Consulting S.L</h3>
+              <p>Durante mis prácticas profesionales he trabajado en la gestión y mantenimiento de servidores, asegurando su correcto funcionamiento y disponibilidad. Paralelamente, he participado en el desarrollo y creación de páginas web, aplicando mis conocimientos en HTML, CSS y JavaScript para construir interfaces funcionales y orientadas al usuario.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-column">
+          <div class="skills-container">
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Habilidades Duras:</h2>
+            <div class="skill-tag-group">
+              <span class="skill-tag"><i class="devicon-java-plain"></i> Java</span>
+              <span class="skill-tag"><i class="devicon-python-plain"></i> Python</span>
+              <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+              <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML / <i class="devicon-css3-plain"></i> CSS</span>
+              <span class="skill-tag"><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
+              <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+            </div>
+          </div>
+
+          <div class="skills-container">
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Habilidades Blandas:</h2>
+            <div class="skill-tag-group">
+              <span class="skill-tag">Trabajo en equipo</span>
+              <span class="skill-tag">Comunicación</span>
+              <span class="skill-tag">Resolución de problemas</span>
+              <span class="skill-tag">Adaptabilidad</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> — Héctor García</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
